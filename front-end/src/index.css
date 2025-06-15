@@ -1,0 +1,248 @@
+body {
+  background-color: #1f1e1e;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.todo-wrapper {
+  background: #353434;
+  padding: 2%;
+  width: fit-content;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0px 5px 7px rgb(27, 27, 27);
+}
+
+/* Todo Input Section */
+.todo-input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid rgb(78, 78, 78);
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+
+.todo-input-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 25px;
+}
+
+.todo-input-item label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.todo-input-item input {
+  padding: 8px;
+  border: none;
+  width: 250px;
+}
+
+.todo-input-item input:focus {
+  outline: none;
+}
+
+/* Buttons */
+.primaryBtn {
+  background-color: rgb(0, 230, 122);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  width: 60px;
+  cursor: pointer;
+}
+
+.primaryBtn:hover {
+  background-color: rgb(4, 196, 106);
+}
+
+.secondaryBtn {
+  background-color: rgb(71, 71, 71);
+  color: white;
+  border: none;
+  border-radius: 0px;
+  margin-top: 25px;
+  padding: 10px;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.active {
+  background-color: rgb(0, 230, 122);
+}
+
+/* Todo List */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-area {
+  margin-bottom: 15px;
+}
+
+.todo-list-item {
+  background-color: #414040;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0px 3px 5px rgb(43, 42, 42);
+}
+
+.todo-list-item h3 {
+  font-size: 25px;
+  color: rgb(0, 230, 122);
+  font-weight: bold;
+  margin: 0;
+}
+
+.todo-list-item p {
+  font-size: 14px;
+  color: rgb(161, 161, 161);
+  margin-top: 8px;
+}
+
+.icon {
+  font-size: 35px;
+  cursor: pointer;
+}
+
+.icon:hover {
+  color: red;
+}
+
+.check-icon {
+  font-size: 25px;
+  margin-left: 10px;
+  color: rgb(0, 230, 122);
+  cursor: pointer;
+}
+
+.check-icon:hover {
+  color: rgb(4, 196, 106);
+}
+
+/* Edit Wrapper */
+.edit__wrapper {
+  background-color: #414040;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit__wrapper input,
+.edit__wrapper textarea {
+  border: 1px solid lightgray;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 3px;
+}
+
+.edit__wrapper .primaryBtn {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px;
+  font-size: 16px;
+  width: fit-content;
+}
+
+/* Responsive Styles for Mobile */
+@media only screen and (max-width: 768px) {
+  .App h1{
+    font-size: 24px;
+  }
+  .App {
+    /* border: 1px solid white; */
+    width: 100%;
+    height: 100vh;  
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; /* Align content in a column */
+    align-items: center;    /* Center align elements horizontally */
+  }
+
+  .todo-wrapper {
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    width: 100%;  /* 90% of App's width */
+    height: 100%; /* 90% of App's height */
+    /* padding: 15px; */
+    box-sizing: border-box;
+    overflow-y: auto; 
+  }
+
+  /* Input Section */
+  .todo-input {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Spacing below input section */
+  }
+
+  .todo-input-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px; /* Spacing between input items */
+    
+  }
+  .todo-input-item label{
+    margin-top: 15px;
+  }
+  .todo-input-item input {
+    width: 95%; /* Ensure inputs take full width of container */
+    padding: 10px;
+    margin-top: 5px; /* Space between label and input */
+    margin-left: 7px;
+  }
+
+  /* Todo List Items */
+  .todo-list-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 15px; /* Space between items */
+    padding: 15px;
+  }
+  .primaryBtn{
+    margin-top: 20px;
+    margin-left: 20px;
+    border-radius: 10px;
+    width: 90px;
+  }
+  .secondaryBtn{
+    width: 70px;
+    font-size: 12px;
+    align-items: center;
+  }
+  #todo{
+    margin-left: 15px;
+  }
+  #todo1{
+    width: 90px;
+  }
+  .todo-list-item{
+    width: 150px;
+    height: 170px;
+    align-items: center;
+    margin-left: 10px;
+  }
+}
